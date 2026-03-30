@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyPunjabiEarn - Winnipeg ਵਿੱਚ ਡੇਲੀ ਡਾਲਰ ਕਮਾਓ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{font-family: system-ui;}</style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-green-700 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between">DailyPunjabiEarn | Winnipeg</div>
+    </nav>
+    
+    <section class="bg-blue-600 text-white py-20 text-center">
+        <h1 class="text-4xl font-bold">ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ</h1>
+    </section>
+    
+    <section class="max-w-6xl mx-auto p-8">
+        <h2 class="text-2xl mb-6">5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ (ਪੰਜਾਬੀ ਵਿੱਚ)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div class="bg-white p-4 rounded shadow">1. Upwork ਤੇ ਪੰਜਾਬੀ ਲਿਖਣੀਆਂ ਵੇਚੋ</div>
+            <div class="bg-white p-4 rounded shadow">2. Groww ਐਪ ਤੋਂ SIP ਸ਼ੁਰੂ ਕਰੋ</div>
+            <div class="bg-white p-4 rounded shadow">3. Amazon Affiliate ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ</div>
+            <div class="bg-white p-4 rounded shadow">4. YouTube Shorts ਬਣਾਓ</div>
+            <div class="bg-white p-4 rounded shadow">5. Fiverr ਤੇ ਲੋਗੋ ਬਣਾਓ</div>
+        </div>
+    </section>
+    
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-2xl mb-6">ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-bold mb-3">EMI ਕੈਲਕੁਲੇਟਰ</h3>
+                <input id="emiP" type="number" placeholder="Loan Amount" class="border p-2 w-full mb-2">
+                <input id="emiR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
+                <input id="emiT" type="number" placeholder="Months" class="border p-2 w-full mb-2">
+                <button onclick="calcEMI()" class="bg-green-600 text-white px-6 py-2">Calculate</button>
+                <p id="emiResult" class="mt-4 font-bold"></p>
+            </div>
+            
+            <div>
+                <h3 class="font-bold mb-3">SIP ਕੈਲਕੁਲੇਟਰ</h3>
+                <input id="sipP" type="number" placeholder="Monthly Investment" class="border p-2 w-full mb-2">
+                <input id="sipR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
+                <input id="sipT" type="number" placeholder="Years" class="border p-2 w-full mb-2">
+                <button onclick="calcSIP()" class="bg-green-600 text-white px-6 py-2">Calculate</button>
+                <p id="sipResult" class="mt-4 font-bold"></p>
+            </div>
+            
+            <div>
+                <h3 class="font-bold mb-3">ਲੋਨ ਇੰਟਰੈਸਟ</h3>
+                <input id="loanP" type="number" placeholder="Principal" class="border p-2 w-full mb-2">
+                <input id="loanR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
+                <input id="loanT" type="number" placeholder="Months" class="border p-2 w-full mb-2">
+                <button onclick="calcLoan()" class="bg-green-600 text-white px-6 py-2">Calculate</button>
+                <p id="loanResult" class="mt-4 font-bold"></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="max-w-6xl mx-auto p-8">
+        <h2 class="text-2xl mb-4">ਅਫੀਲੀਏਟ ਲਿੰਕ (ਕਲਿੱਕ ਕਰੋ ਤੇ ਕਮਾਓ)</h2>
+        <div class="flex gap-4 flex-wrap">
+            <a href="https://groww.in" class="bg-blue-500 text-white px-6 py-3 rounded">Groww - SIP ਸ਼ੁਰੂ ਕਰੋ</a>
+            <a href="https://amazon.ca" class="bg-orange-500 text-white px-6 py-3 rounded">Amazon Affiliate</a>
+        </div>
+    </section>
+    
+    <div class="max-w-6xl mx-auto p-8">
+        <div class="bg-yellow-200 p-6 text-center mb-8">ਇੱਥੇ Google AdSense ਐਡ ਲੱਗੇਗੀ (ਅਪਰੂਵਲ ਲੈ ਕੇ ਪੇਸਟ ਕਰੋ)</div>
+    </div>
+    
+    <footer class="bg-gray-800 text-white p-6 text-center">
+        Winnipeg, Canada • DailyPunjabiEarn © 2026
+    </footer>
+    
+    <script>
+        function calcEMI() {
+            let p = parseFloat(document.getElementById('emiP').value);
+            let r = parseFloat(document.getElementById('emiR').value)/12/100;
+            let t = parseFloat(document.getElementById('emiT').value);
+            if(p && r && t) {
+                let emi = p * r * Math.pow(1+r,t) / (Math.pow(1+r,t)-1);
+                document.getElementById('emiResult').innerHTML = 'EMI: $' + emi.toFixed(2);
+            }
+        }
+        function calcSIP() {
+            let p = parseFloat(document.getElementById('sipP').value);
+            let r = parseFloat(document.getElementById('sipR').value)/12/100;
+            let t = parseFloat(document.getElementById('sipT').value)*12;
+            if(p && r && t) {
+                let sip = p * ((Math.pow(1+r,t)-1)/r) * (1+r);
+                document.getElementById('sipResult').innerHTML = 'Future Value: $' + sip.toFixed(2);
+            }
+        }
+        function calcLoan() {
+            let p = parseFloat(document.getElementById('loanP').value);
+            let r = parseFloat(document.getElementById('loanR').value)/12/100;
+            let t = parseFloat(document.getElementById('loanT').value);
+            if(p && r && t) {
+                let total = p + (p * r * t);
+                document.getElementById('loanResult').innerHTML = 'Total Interest: $' + (total - p).toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
