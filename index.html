@@ -1,56 +1,60 @@
 <!DOCTYPE html>
-<html lang="pa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyPunjabiEarn - Winnipeg ਵਿੱਚ ਡੇਲੀ ਡਾਲਰ ਕਮਾਓ</title>
+    <title>DailyPunjabiEarn - Earn Daily Dollars in Winnipeg</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>body{font-family: system-ui;}</style>
 </head>
 <body class="bg-gray-50">
     <nav class="bg-green-700 text-white p-4">
-        <div class="max-w-6xl mx-auto flex justify-between">DailyPunjabiEarn | Winnipeg</div>
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div>DailyPunjabiEarn | Winnipeg</div>
+            <div class="flex gap-3">
+                <button onclick="changeLang('en')" class="px-4 py-1 bg-white text-green-700 rounded font-bold">English</button>
+                <button onclick="changeLang('pa')" class="px-4 py-1 bg-white text-green-700 rounded">ਪੰਜਾਬੀ</button>
+                <button onclick="changeLang('hi')" class="px-4 py-1 bg-white text-green-700 rounded">हिंदी</button>
+            </div>
+        </div>
     </nav>
     
     <section class="bg-blue-600 text-white py-20 text-center">
-        <h1 class="text-4xl font-bold">ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ</h1>
+        <h1 id="hero" class="text-4xl font-bold">Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg</h1>
     </section>
     
     <section class="max-w-6xl mx-auto p-8">
-        <h2 class="text-2xl mb-6">5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ (ਪੰਜਾਬੀ ਵਿੱਚ)</h2>
+        <h2 id="tips_title" class="text-2xl mb-6">5 Daily Earning Tips</h2>
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-            <div class="bg-white p-4 rounded shadow">1. Upwork ਤੇ ਪੰਜਾਬੀ ਲਿਖਣੀਆਂ ਵੇਚੋ</div>
-            <div class="bg-white p-4 rounded shadow">2. Groww ਐਪ ਤੋਂ SIP ਸ਼ੁਰੂ ਕਰੋ</div>
-            <div class="bg-white p-4 rounded shadow">3. Amazon Affiliate ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ</div>
-            <div class="bg-white p-4 rounded shadow">4. YouTube Shorts ਬਣਾਓ</div>
-            <div class="bg-white p-4 rounded shadow">5. Fiverr ਤੇ ਲੋਗੋ ਬਣਾਓ</div>
+            <div id="tip1" class="bg-white p-4 rounded shadow">1. Sell Punjabi writing on Upwork</div>
+            <div id="tip2" class="bg-white p-4 rounded shadow">2. Start SIP on Groww App</div>
+            <div id="tip3" class="bg-white p-4 rounded shadow">3. Share Amazon Affiliate Links</div>
+            <div id="tip4" class="bg-white p-4 rounded shadow">4. Make YouTube Shorts</div>
+            <div id="tip5" class="bg-white p-4 rounded shadow">5. Create Logos on Fiverr</div>
         </div>
     </section>
     
     <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-2xl mb-6">ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ</h2>
-        
+        <h2 id="calc_title" class="text-2xl mb-6">Interactive Calculators</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-                <h3 class="font-bold mb-3">EMI ਕੈਲਕੁਲੇਟਰ</h3>
+                <h3 class="font-bold mb-3">EMI Calculator</h3>
                 <input id="emiP" type="number" placeholder="Loan Amount" class="border p-2 w-full mb-2">
                 <input id="emiR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
                 <input id="emiT" type="number" placeholder="Months" class="border p-2 w-full mb-2">
                 <button onclick="calcEMI()" class="bg-green-600 text-white px-6 py-2">Calculate</button>
                 <p id="emiResult" class="mt-4 font-bold"></p>
             </div>
-            
             <div>
-                <h3 class="font-bold mb-3">SIP ਕੈਲਕੁਲੇਟਰ</h3>
+                <h3 class="font-bold mb-3">SIP Calculator</h3>
                 <input id="sipP" type="number" placeholder="Monthly Investment" class="border p-2 w-full mb-2">
                 <input id="sipR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
                 <input id="sipT" type="number" placeholder="Years" class="border p-2 w-full mb-2">
                 <button onclick="calcSIP()" class="bg-green-600 text-white px-6 py-2">Calculate</button>
                 <p id="sipResult" class="mt-4 font-bold"></p>
             </div>
-            
             <div>
-                <h3 class="font-bold mb-3">ਲੋਨ ਇੰਟਰੈਸਟ</h3>
+                <h3 class="font-bold mb-3">Loan Interest</h3>
                 <input id="loanP" type="number" placeholder="Principal" class="border p-2 w-full mb-2">
                 <input id="loanR" type="number" placeholder="Rate %" class="border p-2 w-full mb-2">
                 <input id="loanT" type="number" placeholder="Months" class="border p-2 w-full mb-2">
@@ -60,23 +64,43 @@
         </div>
     </section>
     
-    <section class="max-w-6xl mx-auto p-8">
-        <h2 class="text-2xl mb-4">ਅਫੀਲੀਏਟ ਲਿੰਕ (ਕਲਿੱਕ ਕਰੋ ਤੇ ਕਮਾਓ)</h2>
-        <div class="flex gap-4 flex-wrap">
-            <a href="https://groww.in" class="bg-blue-500 text-white px-6 py-3 rounded">Groww - SIP ਸ਼ੁਰੂ ਕਰੋ</a>
-            <a href="https://amazon.ca" class="bg-orange-500 text-white px-6 py-3 rounded">Amazon Affiliate</a>
-        </div>
-    </section>
-    
-    <div class="max-w-6xl mx-auto p-8">
-        <div class="bg-yellow-200 p-6 text-center mb-8">ਇੱਥੇ Google AdSense ਐਡ ਲੱਗੇਗੀ (ਅਪਰੂਵਲ ਲੈ ਕੇ ਪੇਸਟ ਕਰੋ)</div>
-    </div>
-    
     <footer class="bg-gray-800 text-white p-6 text-center">
         Winnipeg, Canada • DailyPunjabiEarn © 2026
     </footer>
     
     <script>
+        function changeLang(lang) {
+            if (lang === 'pa') {
+                document.getElementById('hero').innerHTML = "ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ";
+                document.getElementById('tips_title').innerHTML = "5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ";
+                document.getElementById('calc_title').innerHTML = "ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ";
+                document.getElementById('tip1').innerHTML = "1. Upwork ਤੇ ਪੰਜਾਬੀ ਲਿਖਣੀਆਂ ਵੇਚੋ";
+                document.getElementById('tip2').innerHTML = "2. Groww ਐਪ ਤੋਂ SIP ਸ਼ੁਰੂ ਕਰੋ";
+                document.getElementById('tip3').innerHTML = "3. Amazon Affiliate ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ";
+                document.getElementById('tip4').innerHTML = "4. YouTube Shorts ਬਣਾਓ";
+                document.getElementById('tip5').innerHTML = "5. Fiverr ਤੇ ਲੋਗੋ ਬਣਾਓ";
+            } else if (lang === 'hi') {
+                document.getElementById('hero').innerHTML = "आज की डेली टिप: विन्नीपेग में फ्रीलांसिंग से $50/दिन कमाएं";
+                document.getElementById('tips_title').innerHTML = "5 डेली अर्निंग टिप्स";
+                document.getElementById('calc_title').innerHTML = "इंटरएक्टिव कैलकुलेटर";
+                document.getElementById('tip1').innerHTML = "1. Upwork पर पंजाबी लिखावट बेचें";
+                document.getElementById('tip2').innerHTML = "2. Groww ऐप से SIP शुरू करें";
+                document.getElementById('tip3').innerHTML = "3. Amazon Affiliate लिंक शेयर करें";
+                document.getElementById('tip4').innerHTML = "4. YouTube Shorts बनाएं";
+                document.getElementById('tip5').innerHTML = "5. Fiverr पर लोगो बनाएं";
+            } else {
+                // Default English
+                document.getElementById('hero').innerHTML = "Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg";
+                document.getElementById('tips_title').innerHTML = "5 Daily Earning Tips";
+                document.getElementById('calc_title').innerHTML = "Interactive Calculators";
+                document.getElementById('tip1').innerHTML = "1. Sell Punjabi writing on Upwork";
+                document.getElementById('tip2').innerHTML = "2. Start SIP on Groww App";
+                document.getElementById('tip3').innerHTML = "3. Share Amazon Affiliate Links";
+                document.getElementById('tip4').innerHTML = "4. Make YouTube Shorts";
+                document.getElementById('tip5').innerHTML = "5. Create Logos on Fiverr";
+            }
+        }
+        
         function calcEMI() {
             let p = parseFloat(document.getElementById('emiP').value);
             let r = parseFloat(document.getElementById('emiR').value)/12/100;
