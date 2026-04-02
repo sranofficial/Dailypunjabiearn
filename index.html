@@ -22,6 +22,11 @@
     <section class="bg-blue-600 text-white py-20 text-center">
         <h1 id="hero" class="text-4xl font-bold">Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg</h1>
     </section>
+
+    <!-- ਇੱਕ ਸੋਹਣੀ ਇਮੇਜ -->
+    <div class="max-w-6xl mx-auto p-4">
+        <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-lg shadow">
+    </div>
     
     <section class="max-w-6xl mx-auto p-8">
         <h2 id="tips_title" class="text-2xl mb-6">5 Daily Earning Tips</h2>
@@ -31,6 +36,14 @@
             <div id="tip3" class="bg-white p-4 rounded shadow">3. Share Amazon Affiliate Links</div>
             <div id="tip4" class="bg-white p-4 rounded shadow">4. Make YouTube Shorts</div>
             <div id="tip5" class="bg-white p-4 rounded shadow">5. Create Logos on Fiverr</div>
+        </div>
+    </section>
+
+    <!-- ਛੋਟੀ ਵੀਡੀਓ -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-2xl mb-6 text-center">How to Earn Money Online (Video)</h2>
+        <div class="aspect-video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9wgxcq" title="Earn Money Tips" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
     
@@ -74,30 +87,14 @@
                 document.getElementById('hero').innerHTML = "ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ";
                 document.getElementById('tips_title').innerHTML = "5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ";
                 document.getElementById('calc_title').innerHTML = "ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ";
-                document.getElementById('tip1').innerHTML = "1. Upwork ਤੇ ਪੰਜਾਬੀ ਲਿਖਣੀਆਂ ਵੇਚੋ";
-                document.getElementById('tip2').innerHTML = "2. Groww ਐਪ ਤੋਂ SIP ਸ਼ੁਰੂ ਕਰੋ";
-                document.getElementById('tip3').innerHTML = "3. Amazon Affiliate ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ";
-                document.getElementById('tip4').innerHTML = "4. YouTube Shorts ਬਣਾਓ";
-                document.getElementById('tip5').innerHTML = "5. Fiverr ਤੇ ਲੋਗੋ ਬਣਾਓ";
             } else if (lang === 'hi') {
                 document.getElementById('hero').innerHTML = "आज की डेली टिप: विन्नीपेग में फ्रीलांसिंग से $50/दिन कमाएं";
                 document.getElementById('tips_title').innerHTML = "5 डेली अर्निंग टिप्स";
                 document.getElementById('calc_title').innerHTML = "इंटरएक्टिव कैलकुलेटर";
-                document.getElementById('tip1').innerHTML = "1. Upwork पर पंजाबी लिखावट बेचें";
-                document.getElementById('tip2').innerHTML = "2. Groww ऐप से SIP शुरू करें";
-                document.getElementById('tip3').innerHTML = "3. Amazon Affiliate लिंक शेयर करें";
-                document.getElementById('tip4').innerHTML = "4. YouTube Shorts बनाएं";
-                document.getElementById('tip5').innerHTML = "5. Fiverr पर लोगो बनाएं";
             } else {
-                // Default English
                 document.getElementById('hero').innerHTML = "Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg";
                 document.getElementById('tips_title').innerHTML = "5 Daily Earning Tips";
                 document.getElementById('calc_title').innerHTML = "Interactive Calculators";
-                document.getElementById('tip1').innerHTML = "1. Sell Punjabi writing on Upwork";
-                document.getElementById('tip2').innerHTML = "2. Start SIP on Groww App";
-                document.getElementById('tip3').innerHTML = "3. Share Amazon Affiliate Links";
-                document.getElementById('tip4').innerHTML = "4. Make YouTube Shorts";
-                document.getElementById('tip5').innerHTML = "5. Create Logos on Fiverr";
             }
         }
         
