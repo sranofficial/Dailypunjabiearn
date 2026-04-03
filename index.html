@@ -82,3 +82,153 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyPunjabiEarn - Earn Daily Dollars in Winnipeg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{font-family: system-ui;}</style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-green-700 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">DailyPunjabiEarn</div>
+            <div class="flex gap-3">
+                <button onclick="changeLang('en')" class="px-4 py-1 bg-white text-green-700 rounded font-bold">English</button>
+                <button onclick="changeLang('pa')" class="px-4 py-1 bg-white text-green-700 rounded">ਪੰਜਾਬੀ</button>
+                <button onclick="changeLang('hi')" class="px-4 py-1 bg-white text-green-700 rounded">हिंदी</button>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="bg-blue-600 text-white py-20 text-center">
+        <h1 id="hero" class="text-4xl font-bold">Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg</h1>
+    </section>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-3xl shadow-xl">
+    </div>
+    
+    <section class="max-w-6xl mx-auto p-8">
+        <h2 id="tips_title" class="text-3xl mb-8 text-center">5 Daily Earning Tips</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div id="tip1" class="bg-white p-6 rounded-3xl shadow">1. Sell Punjabi writing on Upwork</div>
+            <div id="tip2" class="bg-white p-6 rounded-3xl shadow">2. Start SIP on Groww App</div>
+            <div id="tip3" class="bg-white p-6 rounded-3xl shadow">3. Share Amazon Affiliate Links</div>
+            <div id="tip4" class="bg-white p-6 rounded-3xl shadow">4. Make YouTube Shorts</div>
+            <div id="tip5" class="bg-white p-6 rounded-3xl shadow">5. Create Logos on Fiverr</div>
+        </div>
+    </section>
+
+    <!-- Adsterra ਐਡ ਲਿੰਕ -->
+    <div class="max-w-6xl mx-auto p-8 text-center">
+        <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" target="_blank" class="bg-orange-500 text-white px-8 py-4 rounded-3xl text-xl font-bold inline-block hover:bg-orange-600 transition">
+            💰 Click Here to Earn More Money - Real Adsterra Offer
+        </a>
+    </div>
+
+    <!-- Knowledge Corner -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-3xl mb-6 text-center">Knowledge Corner</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-3xl shadow">💡 SIP of $100/month at 12% can become over $100,000 in 25 years</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 YouTube Shorts can earn $1000+ per month with good views</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 Fiverr gigs in Punjabi content can earn $20-50 per order</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 Amazon Affiliate gives 5-10% commission on every sale</div>
+        </div>
+    </section>
+
+    <!-- Calculators -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 id="calc_title" class="text-3xl mb-8 text-center">Interactive Calculators</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-bold mb-3">EMI Calculator</h3>
+                <input id="emiP" type="number" placeholder="Loan Amount" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="emiR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="emiT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcEMI()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="emiResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">SIP Calculator</h3>
+                <input id="sipP" type="number" placeholder="Monthly Investment" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="sipR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="sipT" type="number" placeholder="Years" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcSIP()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="sipResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Loan Interest</h3>
+                <input id="loanP" type="number" placeholder="Principal" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="loanR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="loanT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcLoan()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="loanResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ਗੁਰਬਾਣੀ ਕਾਰਨਰ -->
+    <div class="fixed bottom-6 right-6 bg-white shadow-2xl p-4 rounded-3xl text-center max-w-[220px]">
+        <p class="text-green-700 font-medium text-lg">ੴ ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ<br>ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਿਹ</p>
+    </div>
+    
+    <footer class="bg-gray-900 text-white p-8 text-center">
+        <div class="flex flex-wrap justify-center gap-8 text-sm">
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">About Us</a>
+            <a href="#" class="hover:underline">Contact Us</a>
+        </div>
+        <p class="mt-6">Winnipeg, Canada • DailyPunjabiEarn © 2026</p>
+    </footer>
+    
+    <script>
+        function changeLang(lang) {
+            if (lang === 'pa') {
+                document.getElementById('hero').innerHTML = "ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ";
+                document.getElementById('tips_title').innerHTML = "5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ";
+                document.getElementById('calc_title').innerHTML = "ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ";
+            } else if (lang === 'hi') {
+                document.getElementById('hero').innerHTML = "आज की डेली टिप: विन्नीपेग में फ्रीलांसिंग से $50/दिन कमाएं";
+                document.getElementById('tips_title').innerHTML = "5 डेली अर्निंग टिप्स";
+                document.getElementById('calc_title').innerHTML = "इंटरएक्टिव कैलकुलेटर";
+            } else {
+                document.getElementById('hero').innerHTML = "Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg";
+                document.getElementById('tips_title').innerHTML = "5 Daily Earning Tips";
+                document.getElementById('calc_title').innerHTML = "Interactive Calculators";
+            }
+        }
+        
+        function calcEMI() {
+            let p = parseFloat(document.getElementById('emiP').value);
+            let r = parseFloat(document.getElementById('emiR').value)/12/100;
+            let t = parseFloat(document.getElementById('emiT').value);
+            if(p && r && t) {
+                let emi = p * r * Math.pow(1+r,t) / (Math.pow(1+r,t)-1);
+                document.getElementById('emiResult').innerHTML = 'EMI: $' + emi.toFixed(2);
+            }
+        }
+        function calcSIP() {
+            let p = parseFloat(document.getElementById('sipP').value);
+            let r = parseFloat(document.getElementById('sipR').value)/12/100;
+            let t = parseFloat(document.getElementById('sipT').value)*12;
+            if(p && r && t) {
+                let sip = p * ((Math.pow(1+r,t)-1)/r) * (1+r);
+                document.getElementById('sipResult').innerHTML = 'Future Value: $' + sip.toFixed(2);
+            }
+        }
+        function calcLoan() {
+            let p = parseFloat(document.getElementById('loanP').value);
+            let r = parseFloat(document.getElementById('loanR').value)/12/100;
+            let t = parseFloat(document.getElementById('loanT').value);
+            if(p && r && t) {
+                let total = p + (p * r * t);
+                document.getElementById('loanResult').innerHTML = 'Total Interest: $' + (total - p).toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
