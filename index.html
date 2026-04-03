@@ -1,145 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyPunjabiEarn - Earn Daily Dollars in Winnipeg</title>
+    <title>Daily Earn Money | Winnipeg Professional</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ID" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body{font-family: system-ui;}</style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #fbbf24; }
+        body { background: #0f172a; color: white; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        .nav-tab.active { border-bottom: 4px solid var(--secondary); color: var(--secondary); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
+        .neon-border { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(251, 191, 36, 0); } 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); } }
+        .earn-btn { animation: pulse-gold 2s infinite; }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <nav class="bg-green-700 text-white p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">DailyPunjabiEarn</div>
-            <div class="flex gap-3">
-                <button onclick="changeLang('en')" class="px-4 py-1 bg-white text-green-700 rounded font-bold">English</button>
-                <button onclick="changeLang('pa')" class="px-4 py-1 bg-white text-green-700 rounded">ਪੰਜਾਬੀ</button>
-                <button onclick="changeLang('hi')" class="px-4 py-1 bg-white text-green-700 rounded">हिंदी</button>
-            </div>
+<body>
+
+    <nav class="glass sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-widest text-yellow-400">DAILY<span class="text-white font-light">EARN</span></div>
+        <div class="flex gap-4 md:gap-8 text-xs font-bold uppercase tracking-widest">
+            <button onclick="showSection('earn')" id="tab-earn" class="nav-tab active pb-1">Earn</button>
+            <button onclick="showSection('astro')" id="tab-astro" class="nav-tab pb-1">Astro</button>
+            <button onclick="showSection('tools')" id="tab-tools" class="nav-tab pb-1">Tools</button>
         </div>
     </nav>
-    
-    <section class="bg-blue-600 text-white py-20 text-center">
-        <h1 id="hero" class="text-4xl font-bold">Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg</h1>
-    </section>
 
-    <div class="max-w-6xl mx-auto p-6">
-        <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-3xl shadow-xl">
+    <main class="max-w-5xl mx-auto p-6 mt-8">
+
+        <section id="sec-earn" class="space-y-10 animate-fade-in">
+            <div class="glass rounded-[3rem] p-10 text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 bg-yellow-400 text-blue-900 font-black rounded-bl-3xl">TOP PAID</div>
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Winnipeg's Daily Cash <br><span class="text-yellow-400">Direct Tasks</span></h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">No Investment. No Skills Needed. Just 1-minute tasks to earn real dollars from your home in Canada.</p>
+                
+                <a href="YOUR_ADSTERRA_LINK" class="earn-btn inline-block bg-yellow-400 text-blue-950 px-12 py-6 rounded-2xl text-3xl font-black transition-transform hover:scale-105 active:scale-95">
+                    <i class="fas fa-dollar-sign mr-2"></i> START TASK NOW
+                </a>
+                
+                <div class="mt-12 grid grid-cols-3 gap-4 text-center">
+                    <div class="p-4 bg-white/5 rounded-2xl"><span class="block text-2xl font-bold">$12.4k</span><span class="text-[10px] text-gray-500 uppercase">Paid Today</span></div>
+                    <div class="p-4 bg-white/5 rounded-2xl"><span class="block text-2xl font-bold">98%</span><span class="text-[10px] text-gray-500 uppercase">Success Rate</span></div>
+                    <div class="p-4 bg-white/5 rounded-2xl"><span class="block text-2xl font-bold">Winnipeg</span><span class="text-[10px] text-gray-500 uppercase">Top Region</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-astro" class="hidden space-y-10 animate-fade-in">
+            <div id="astro-bg" class="glass rounded-[3rem] p-10 transition-all duration-700">
+                <h2 class="text-3xl font-black mb-4"><i class="fas fa-star mr-3 text-yellow-400"></i>Numerology Luck</h2>
+                <p class="text-gray-400 mb-8">ਆਪਣੀ ਜਨਮ ਤਰੀਕ ਭਰੋ ਅਤੇ ਜਾਣੋ ਆਪਣਾ ਲੱਕੀ ਨੰਬਰ ਅਤੇ ਮੈਚਿੰਗ ਕਲਰ।</p>
+                
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input id="dob" type="date" class="bg-white/10 p-5 rounded-2xl text-xl font-bold outline-none border border-white/20 focus:border-yellow-400 flex-1">
+                    <button onclick="calcAstro()" class="bg-white text-blue-900 px-10 py-5 rounded-2xl font-black text-xl hover:bg-yellow-400 transition-colors">GET RESULTS</button>
+                </div>
+
+                <div id="astro-res" class="hidden mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-black/30 rounded-3xl text-center border border-white/10">
+                        <span class="text-sm uppercase tracking-widest">Lucky Number</span>
+                        <h3 id="res-num" class="text-8xl font-black text-yellow-400 mt-2">--</h3>
+                    </div>
+                    <div class="p-8 bg-black/30 rounded-3xl text-center border border-white/10">
+                        <span class="text-sm uppercase tracking-widest">Matching Energy</span>
+                        <h3 id="res-color" class="text-3xl font-black mt-2">--</h3>
+                        <div id="color-dot" class="w-10 h-10 rounded-full mx-auto mt-4 border-2 border-white"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-tools" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+            <div class="glass p-8 rounded-[2.5rem]">
+                <h3 class="text-xl font-bold mb-6 italic border-b border-white/10 pb-2">SIP Calculator</h3>
+                <input id="sip-amt" type="number" placeholder="Monthly $ Investment" class="w-full bg-white/5 p-4 rounded-xl mb-4 border border-white/10">
+                <button onclick="calcSIP()" class="w-full bg-blue-600 py-4 rounded-xl font-bold hover:bg-blue-500">Calculate Future Wealth</button>
+                <p id="sip-res" class="mt-4 text-center font-black text-yellow-400 text-xl"></p>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem]">
+                <h3 class="text-xl font-bold mb-6 italic border-b border-white/10 pb-2">Daily Earning Goal</h3>
+                <p class="text-xs text-gray-500 mb-4 italic">How many clicks do you need today?</p>
+                <input id="goal-amt" type="number" placeholder="Target Amount ($)" class="w-full bg-white/5 p-4 rounded-xl mb-4 border border-white/10">
+                <button onclick="calcGoal()" class="w-full bg-green-600 py-4 rounded-xl font-bold hover:bg-green-500">Generate Plan</button>
+                <p id="goal-res" class="mt-4 text-center font-bold text-green-400"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="max-w-4xl mx-auto mt-12 p-4 text-center opacity-50 text-[10px]">
+        [Ads will appear here automatically after AdSense approval]
     </div>
-    
-    <section class="max-w-6xl mx-auto p-8">
-        <h2 id="tips_title" class="text-3xl mb-8 text-center">5 Daily Earning Tips</h2>
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <div id="tip1" class="bg-white p-6 rounded-3xl shadow">1. Sell Punjabi writing on Upwork</div>
-            <div id="tip2" class="bg-white p-6 rounded-3xl shadow">2. Start SIP on Groww App</div>
-            <div id="tip3" class="bg-white p-6 rounded-3xl shadow">3. Share Amazon Affiliate Links</div>
-            <div id="tip4" class="bg-white p-6 rounded-3xl shadow">4. Make YouTube Shorts</div>
-            <div id="tip5" class="bg-white p-6 rounded-3xl shadow">5. Create Logos on Fiverr</div>
-        </div>
-    </section>
 
-    <!-- Knowledge Corner -->
-    <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-3xl mb-6 text-center">Knowledge Corner</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-3xl shadow">💡 SIP of $100/month at 12% can become over $100,000 in 25 years</div>
-            <div class="bg-white p-6 rounded-3xl shadow">💡 YouTube Shorts can earn $1000+ per month with good views</div>
-            <div class="bg-white p-6 rounded-3xl shadow">💡 Fiverr gigs in Punjabi content can earn $20-50 per order</div>
-            <div class="bg-white p-6 rounded-3xl shadow">💡 Amazon Affiliate gives 5-10% commission on every sale</div>
-        </div>
-    </section>
-
-    <!-- ਛੋਟੀ ਵੀਡੀਓ -->
-    <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-3xl mb-6 text-center">Quick Money Tip Video</h2>
-        <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- Calculators -->
-    <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 id="calc_title" class="text-3xl mb-8 text-center">Interactive Calculators</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="font-bold mb-3">EMI Calculator</h3>
-                <input id="emiP" type="number" placeholder="Loan Amount" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="emiR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="emiT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
-                <button onclick="calcEMI()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
-                <p id="emiResult" class="mt-6 text-xl font-bold text-center"></p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-3">SIP Calculator</h3>
-                <input id="sipP" type="number" placeholder="Monthly Investment" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="sipR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="sipT" type="number" placeholder="Years" class="border p-3 w-full mb-3 rounded-xl">
-                <button onclick="calcSIP()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
-                <p id="sipResult" class="mt-6 text-xl font-bold text-center"></p>
-            </div>
-            <div>
-                <h3 class="font-bold mb-3">Loan Interest</h3>
-                <input id="loanP" type="number" placeholder="Principal" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="loanR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
-                <input id="loanT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
-                <button onclick="calcLoan()" class="bg-green-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
-                <p id="loanResult" class="mt-6 text-xl font-bold text-center"></p>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="bg-gray-900 text-white p-8 text-center">
-        <div class="flex flex-wrap justify-center gap-8 text-sm">
-            <a href="#" class="hover:underline">Privacy Policy</a>
-            <a href="#" class="hover:underline">About Us</a>
-            <a href="#" class="hover:underline">Contact Us</a>
-        </div>
-        <p class="mt-6">Winnipeg, Canada • DailyPunjabiEarn © 2026</p>
-    </footer>
-    
     <script>
-        function changeLang(lang) {
-            if (lang === 'pa') {
-                document.getElementById('hero').innerHTML = "ਅੱਜ ਦੀ ਡੇਲੀ ਟਿਪ: Winnipeg ਵਿੱਚ ਫਰੀਲਾਂਸਿੰਗ ਨਾਲ $50/ਦਿਨ";
-                document.getElementById('tips_title').innerHTML = "5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ";
-                document.getElementById('calc_title').innerHTML = "ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ";
-            } else if (lang === 'hi') {
-                document.getElementById('hero').innerHTML = "आज की डेली टिप: विन्नीपेग में फ्रीलांसिंग से $50/दिन कमाएं";
-                document.getElementById('tips_title').innerHTML = "5 डेली अर्निंग टिप्स";
-                document.getElementById('calc_title').innerHTML = "इंटरएक्टिव कैलकुलेटर";
-            } else {
-                document.getElementById('hero').innerHTML = "Today's Daily Tip: Earn $50/day with Freelancing in Winnipeg";
-                document.getElementById('tips_title').innerHTML = "5 Daily Earning Tips";
-                document.getElementById('calc_title').innerHTML = "Interactive Calculators";
-            }
+        function showSection(id) {
+            // Hide all
+            document.getElementById('sec-earn').classList.add('hidden');
+            document.getElementById('sec-astro').classList.add('hidden');
+            document.getElementById('sec-tools').classList.add('hidden');
+            // Remove active tabs
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            
+            // Show target
+            document.getElementById('sec-' + id).classList.remove('hidden');
+            document.getElementById('tab-' + id).classList.add('active');
         }
-        
-        function calcEMI() {
-            let p = parseFloat(document.getElementById('emiP').value);
-            let r = parseFloat(document.getElementById('emiR').value)/12/100;
-            let t = parseFloat(document.getElementById('emiT').value);
-            if(p && r && t) {
-                let emi = p * r * Math.pow(1+r,t) / (Math.pow(1+r,t)-1);
-                document.getElementById('emiResult').innerHTML = 'EMI: $' + emi.toFixed(2);
-            }
+
+        function calcAstro() {
+            let d = document.getElementById('dob').value;
+            if(!d) return alert("Select Date!");
+            let n = d.replace(/-/g, '').split('').reduce((a,b) => parseInt(a) + parseInt(b), 0);
+            while(n > 9) n = n.toString().split('').reduce((a,b) => parseInt(a) + parseInt(b), 0);
+
+            const data = {
+                1: ["GOLD", "#fbbf24", "linear-gradient(135deg, #78350f, #fbbf24)"],
+                2: ["SILVER", "#e2e8f0", "linear-gradient(135deg, #1e293b, #94a3b8)"],
+                3: ["YELLOW", "#fde047", "linear-gradient(135deg, #854d0e, #fde047)"],
+                4: ["GREY", "#64748b", "linear-gradient(135deg, #0f172a, #64748b)"],
+                5: ["GREEN", "#22c55e", "linear-gradient(135deg, #064e3b, #22c55e)"],
+                6: ["SKY", "#0ea5e9", "linear-gradient(135deg, #0c4a6e, #0ea5e9)"],
+                7: ["LIME", "#84cc16", "linear-gradient(135deg, #365314, #84cc16)"],
+                8: ["BLUE", "#1d4ed8", "linear-gradient(135deg, #171717, #1d4ed8)"],
+                9: ["RED", "#ef4444", "linear-gradient(135deg, #7f1d1d, #ef4444)"]
+            };
+
+            document.getElementById('res-num').innerText = n;
+            document.getElementById('res-color').innerText = data[n][0];
+            document.getElementById('color-dot').style.backgroundColor = data[n][1];
+            document.getElementById('astro-bg').style.background = data[n][2];
+            document.getElementById('astro-res').classList.remove('hidden');
         }
+
         function calcSIP() {
-            let p = parseFloat(document.getElementById('sipP').value);
-            let r = parseFloat(document.getElementById('sipR').value)/12/100;
-            let t = parseFloat(document.getElementById('sipT').value)*12;
-            if(p && r && t) {
-                let sip = p * ((Math.pow(1+r,t)-1)/r) * (1+r);
-                document.getElementById('sipResult').innerHTML = 'Future Value: $' + sip.toFixed(2);
-            }
+            let p = document.getElementById('sip-amt').value;
+            if(p) document.getElementById('sip-res').innerText = "In 10 Years: $" + (p * 250).toLocaleString();
         }
-        function calcLoan() {
-            let p = parseFloat(document.getElementById('loanP').value);
-            let r = parseFloat(document.getElementById('loanR').value)/12/100;
-            let t = parseFloat(document.getElementById('loanT').value);
-            if(p && r && t) {
-                let total = p + (p * r * t);
-                document.getElementById('loanResult').innerHTML = 'Total Interest: $' + (total - p).toFixed(2);
-            }
+
+        function calcGoal() {
+            let g = document.getElementById('goal-amt').value;
+            if(g) document.getElementById('goal-res').innerText = "You need approx " + Math.round(g / 0.5) + " clicks today.";
         }
     </script>
 </body>
