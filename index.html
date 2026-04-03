@@ -1,132 +1,146 @@
 <!DOCTYPE html>
-<html lang="pa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyPunjabiEarn | Earn Dollars Daily</title>
+    <title>DailyPunjabiEarn | Global Earning Portal</title>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ID" crossorigin="anonymous"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
     <style>
-        /* Aquarius Power Colors: Deep Blue, Electric Blue, & Gold */
-        :root { 
-            --aquarius-deep: #0f172a; 
-            --aquarius-electric: #2563eb; 
-            --luck-gold: #f59e0b; 
-        }
-        body { background: var(--aquarius-deep); color: white; font-family: 'Poppins', sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at top right, #1e40af, #0f172a); }
-        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; }
-        .glass-panel:hover { border-color: var(--aquarius-electric); box-shadow: 0 0 30px rgba(37, 99, 235, 0.2); }
-        .golden-text { color: var(--luck-gold); text-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
-        .btn-shimmer { background: linear-gradient(90deg, #f59e0b, #fbce33, #f59e0b); background-size: 200%; animation: shimmer 3s infinite; }
-        @keyframes shimmer { 0% { background-position: -200%; } 100% { background-position: 200%; } }
+        :root { --royal-blue: #0f172a; --electric: #3b82f6; --silver: #e2e8f0; --gold: #fbbf24; }
+        body { background-color: var(--royal-blue); color: white; font-family: 'Inter', sans-serif; }
+        .glass-morphism { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .earn-card { border-bottom: 4px solid var(--electric); transition: 0.3s; }
+        .earn-card:hover { transform: translateY(-10px); background: rgba(59, 130, 246, 0.1); }
+        .lang-btn { transition: 0.2s; border: 1px solid rgba(255,255,255,0.2); }
+        .lang-btn:hover { background: var(--gold); color: black; }
     </style>
 </head>
 <body>
 
-    <nav class="flex justify-between items-center px-8 py-6 border-b border-white/10 glass-panel sticky top-0 z-50">
-        <div class="text-3xl font-black italic tracking-tighter">
-            DAILY<span class="golden-text">PUNJABI</span>EARN
-        </div>
-        <div class="flex gap-6 items-center">
-            <span class="text-xs font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">LIVE: WINNIPEG</span>
-            <i class="fas fa-user-circle text-2xl text-gray-400"></i>
-        </div>
-    </nav>
-
-    <main class="max-w-6xl mx-auto px-6 py-12">
+    <header class="glass-morphism sticky top-0 z-50 px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+        <div class="text-3xl font-black italic tracking-tight">DAILY<span class="text-yellow-400">PUNJABI</span>EARN</div>
         
-        <section class="hero-gradient rounded-[3.5rem] p-12 text-center border border-white/5 relative overflow-hidden mb-12">
-            <div class="relative z-10">
-                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1]">
-                    Make <span class="golden-text">Real Dollars</span> <br>Every Single Day
-                </h1>
-                <p class="text-gray-400 text-xl max-w-2xl mx-auto mb-10 font-light">
-                    Winnipeg ਦੀ ਸਭ ਤੋਂ ਪਾਵਰਫੁੱਲ ਅਰਨਿੰਗ ਵੈੱਬਸਾਈਟ। ਜ਼ੀਰੋ ਇਨਵੈਸਟਮੈਂਟ, ਸਿੱਧੀ ਕਮਾਈ। 
-                </p>
-                
-                <a href="YOUR_ADSTERRA_LINK" class="btn-shimmer inline-block text-blue-950 px-16 py-6 rounded-2xl text-3xl font-black shadow-[0_0_50px_rgba(245,158,11,0.4)] transition hover:scale-105 active:scale-95 uppercase tracking-widest">
-                    Start Task
-                </a>
+        <div class="flex gap-2">
+            <button onclick="setLang('en')" class="lang-btn px-4 py-1 rounded-full text-xs font-bold">English</button>
+            <button onclick="setLang('pa')" class="lang-btn px-4 py-1 rounded-full text-xs font-bold">ਪੰਜਾਬੀ</button>
+            <button onclick="setLang('hi')" class="lang-btn px-4 py-1 rounded-full text-xs font-bold">हिंदी</button>
+        </div>
+    </header>
 
-                <div class="flex flex-wrap justify-center gap-12 mt-16 opacity-60">
-                    <div class="text-center"><span class="block text-2xl font-bold italic">$0 Investment</span></div>
-                    <div class="text-center"><span class="block text-2xl font-bold italic">Daily Payout</span></div>
-                    <div class="text-center"><span class="block text-2xl font-bold italic">Secure Link</span></div>
-                </div>
+    <main class="max-w-6xl mx-auto p-6 space-y-12">
+        
+        <section class="text-center py-16 px-4 rounded-[3rem] bg-gradient-to-br from-blue-900 to-slate-900 border border-white/10">
+            <h1 id="h-title" class="text-5xl md:text-7xl font-black mb-6">Earn <span class="text-yellow-400">Real Dollars</span> Daily</h1>
+            <p id="h-desc" class="text-gray-400 text-xl max-w-2xl mx-auto mb-10">Winnipeg's most trusted platform for high-paying online tasks. Zero investment required.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="YOUR_ADSTERRA_LINK" class="bg-yellow-400 text-blue-950 px-12 py-5 rounded-2xl text-2xl font-black shadow-[0_0_30px_rgba(251,191,36,0.3)] hover:scale-105 transition uppercase">Start Main Task</a>
             </div>
-            <div class="absolute -top-20 -left-20 w-80 h-80 bg-blue-600/20 rounded-full blur-[100px]"></div>
         </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-morphism p-8 rounded-[2rem] earn-card text-center">
+                <i class="fas fa-laptop-code text-4xl text-blue-400 mb-4"></i>
+                <h3 id="t1-title" class="text-xl font-bold mb-2">App Testing</h3>
+                <p id="t1-desc" class="text-sm text-gray-400 mb-6">Get paid to find bugs and review new apps. Earn $5-$15 per test.</p>
+                <button class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-500">Apply Now</button>
+            </div>
+
+            <div class="glass-morphism p-8 rounded-[2rem] earn-card text-center">
+                <i class="fas fa-file-alt text-4xl text-blue-400 mb-4"></i>
+                <h3 id="t2-title" class="text-xl font-bold mb-2">Content Writing</h3>
+                <p id="t2-desc" class="text-sm text-gray-400 mb-6">Write Punjabi/English articles for global blogs. Earn per word.</p>
+                <button class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-500">View Gigs</button>
+            </div>
+
+            <div class="glass-morphism p-8 rounded-[2rem] earn-card text-center border-yellow-400/50">
+                <i class="fas fa-chart-line text-4xl text-yellow-400 mb-4"></i>
+                <h3 id="t3-title" class="text-xl font-bold mb-2">Survey Panel</h3>
+                <p id="t3-desc" class="text-sm text-gray-400 mb-6">Share your opinion on Canadian brands. Earn instant cash back.</p>
+                <button class="w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-300">Start Survey</button>
+            </div>
+        </section>
+
+        <section class="glass-morphism rounded-[3rem] p-10 border-t-8 border-blue-500">
+            <h2 id="n-title" class="text-3xl font-black mb-4 tracking-tighter">Aquarius Numerology Luck 🔮</h2>
+            <p id="n-desc" class="text-gray-400 mb-8 italic">Find your power color and lucky number today.</p>
             
-            <div class="lg:col-span-2 glass-panel rounded-[3rem] p-10">
-                <h2 class="text-3xl font-bold mb-8 flex items-center">
-                    <i class="fas fa-bahai mr-4 golden-text"></i> Numerology Luck (Aquarius Special)
-                </h2>
-                <div class="flex flex-col md:flex-row gap-6 mb-10">
-                    <input id="dob" type="date" class="bg-white/5 border border-white/10 p-5 rounded-2xl flex-1 text-xl font-bold focus:border-yellow-400 outline-none">
-                    <button onclick="checkAstro()" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-black text-xl transition shadow-xl">FIND LUCK</button>
-                </div>
-                
-                <div id="astro-box" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in">
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10 text-center">
-                        <p class="text-xs uppercase tracking-widest text-gray-500 mb-2 font-bold">Your Lucky Number</p>
-                        <span id="res-num" class="text-8xl font-black golden-text">--</span>
-                    </div>
-                    <div id="res-color-bg" class="p-8 rounded-3xl border border-white/10 text-center flex flex-col justify-center">
-                        <p class="text-xs uppercase tracking-widest text-gray-500 mb-2 font-bold">Your Power Color</p>
-                        <span id="res-color-name" class="text-3xl font-black">--</span>
-                    </div>
-                </div>
+            <div class="flex flex-col md:flex-row gap-4 max-w-xl">
+                <input id="dob" type="date" class="bg-white/5 border border-white/20 p-4 rounded-xl flex-1 text-white font-bold outline-none focus:border-yellow-400">
+                <button onclick="calculateLuck()" class="bg-white text-blue-900 px-8 py-4 rounded-xl font-black hover:bg-yellow-400 transition">FIND MY LUCK</button>
             </div>
-
-            <div class="space-y-8">
-                <div class="glass-panel p-8 rounded-[3rem] border-t-4 border-yellow-400 text-center">
-                    <h3 class="text-gray-400 font-bold text-sm mb-2">MY BALANCE</h3>
-                    <div class="text-4xl font-black golden-text">$0.00</div>
-                    <p class="text-[10px] mt-4 text-gray-500 italic">Withdraw to PayPal/Webmoney once you hit $5</p>
-                </div>
-
-                <div class="glass-panel h-80 rounded-[3rem] flex items-center justify-center border-2 border-dashed border-white/10">
-                    <span class="text-gray-600 font-bold text-xs">ADSENSE AREA</span>
-                </div>
+            
+            <div id="luck-res" class="hidden mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-black/40 p-6 rounded-2xl text-center"><span class="text-xs text-gray-500 uppercase block">Lucky Number</span><span id="res-num" class="text-5xl font-black text-yellow-400">0</span></div>
+                <div class="bg-black/40 p-6 rounded-2xl text-center"><span class="text-xs text-gray-500 uppercase block">Power Color</span><span id="res-col" class="text-lg font-bold text-blue-300">--</span></div>
             </div>
-        </div>
+        </section>
+
     </main>
 
-    <footer class="mt-20 py-12 border-t border-white/10 text-center">
-        <p class="text-sm font-bold tracking-widest text-gray-500">© 2026 DAILYPUNJABIEARN • WINNIPEG OFFICE</p>
-        <div class="flex justify-center gap-6 mt-4 text-xs text-blue-400 font-bold uppercase">
-            <a href="#" class="hover:text-yellow-400">Privacy</a>
-            <a href="#" class="hover:text-yellow-400">Contact</a>
-            <a href="#" class="hover:text-yellow-400">Disclaimer</a>
+    <footer class="bg-black/50 py-16 mt-20 border-t border-white/10 text-center">
+        <p class="text-sm font-bold tracking-widest text-gray-500">DAILYPUNJABIEARN • WINNIPEG OFFICE</p>
+        <div class="flex justify-center gap-8 mt-6 text-xs text-blue-400 font-bold uppercase">
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">About Us</a>
+            <a href="#" class="hover:text-white">Contact</a>
         </div>
     </footer>
 
     <script>
-        function checkAstro() {
+        const content = {
+            en: {
+                title: "Earn Real Dollars Daily",
+                desc: "Winnipeg's most trusted platform for high-paying online tasks. Zero investment required.",
+                t1: "App Testing", t1d: "Get paid to find bugs and review new apps. Earn $5-$15 per test.",
+                t2: "Content Writing", t2d: "Write Punjabi/English articles for global blogs. Earn per word.",
+                t3: "Survey Panel", t3d: "Share your opinion on Canadian brands. Earn instant cash back.",
+                nt: "Aquarius Numerology Luck 🔮", nd: "Find your power color and lucky number today."
+            },
+            pa: {
+                title: "ਰੋਜ਼ਾਨਾ ਅਸਲੀ ਡਾਲਰ ਕਮਾਓ",
+                desc: "ਵਿੰਨੀਪੈਗ ਦਾ ਸਭ ਤੋਂ ਭਰੋਸੇਮੰਦ ਪਲੇਟਫਾਰਮ। ਕੋਈ ਇਨਵੈਸਟਮੈਂਟ ਨਹੀਂ, ਸਿੱਧੀ ਕਮਾਈ।",
+                t1: "ਐਪ ਟੈਸਟਿੰਗ", t1d: "ਨਵੀਆਂ ਐਪਸ ਚੈੱਕ ਕਰੋ ਅਤੇ ਰੀਵਿਊ ਲਿਖ ਕੇ $5-$15 ਕਮਾਓ।",
+                t2: "ਕੰਟੈਂਟ ਰਾਈਟਿੰਗ", t2d: "ਪੰਜਾਬੀ/ਇੰਗਲਿਸ਼ ਵਿੱਚ ਲੇਖ ਲਿਖੋ ਅਤੇ ਡਾਲਰ ਕਮਾਓ।",
+                t3: "ਸਰਵੇ ਪੈਨਲ", t3d: "ਕੈਨੇਡੀਅਨ ਬ੍ਰਾਂਡਾਂ ਬਾਰੇ ਆਪਣੀ ਰਾਏ ਦਿਓ ਅਤੇ ਨਕਦ ਇਨਾਮ ਪਾਓ।",
+                nt: "ਨਿਊਮਰੋਲੋਜੀ ਲੱਕ 🔮", nd: "ਅੱਜ ਦਾ ਆਪਣਾ ਲੱਕੀ ਨੰਬਰ ਅਤੇ ਰੰਗ ਜਾਣੋ।"
+            },
+            hi: {
+                title: "रोजाना असली डॉलर कमाएं",
+                desc: "विन्नीपेग का सबसे भरोसेमंद प्लेटफॉर्म। जीरो इन्वेस्टमेंट, सीधी कमाई।",
+                t1: "ऐप टेस्टिंग", t1d: "नए ऐप्स चेक करें और रिव्यू लिखकर $5-$15 कमाएं।",
+                t2: "कंटेंट राइटिंग", t2d: "पंजाबी/इंग्लिश में लेख लिखें और डॉलर कमाएं।",
+                t3: "सर्वे पैनल", t3d: "कनाडाई ब्रांडों पर अपनी राय दें और कैश कमाएं।",
+                nt: "न्यूमरोलॉजी लक 🔮", nd: "आज का अपना लकी नंबर और रंग जानें।"
+            }
+        };
+
+        function setLang(lang) {
+            document.getElementById('h-title').innerHTML = content[lang].title;
+            document.getElementById('h-desc').innerText = content[lang].desc;
+            document.getElementById('t1-title').innerText = content[lang].t1;
+            document.getElementById('t1-desc').innerText = content[lang].t1d;
+            document.getElementById('t2-title').innerText = content[lang].t2;
+            document.getElementById('t2-desc').innerText = content[lang].t2d;
+            document.getElementById('t3-title').innerText = content[lang].t3;
+            document.getElementById('t3-desc').innerText = content[lang].t3d;
+            document.getElementById('n-title').innerText = content[lang].nt;
+            document.getElementById('n-desc').innerText = content[lang].nd;
+        }
+
+        function calculateLuck() {
             let dob = document.getElementById('dob').value;
-            if(!dob) return alert("Select Date First!");
+            if(!dob) return alert("Select Date First");
+            let sum = dob.replace(/-/g, '').split('').reduce((a,b) => parseInt(a)+parseInt(b), 0);
+            while(sum > 9) sum = sum.toString().split('').reduce((a,b) => parseInt(a)+parseInt(b), 0);
             
-            let n = dob.replace(/-/g, '').split('').reduce((a,b) => parseInt(a) + parseInt(b), 0);
-            while(n > 9) n = n.toString().split('').reduce((a,b) => parseInt(a) + parseInt(b), 0);
-
-            const colors = {
-                1: ["GOLDEN", "#f59e0b"], 2: ["SILVER", "#94a3b8"], 3: ["YELLOW", "#fbbf24"],
-                4: ["GREY", "#475569"], 5: ["GREEN", "#22c55e"], 6: ["LIGHT BLUE", "#0ea5e9"],
-                7: ["LIME", "#84cc16"], 8: ["ROYAL BLUE", "#1e3a8a"], 9: ["RED", "#ef4444"]
-            };
-
-            document.getElementById('res-num').innerText = n;
-            document.getElementById('res-color-name').innerText = colors[n][0];
-            document.getElementById('res-color-bg').style.background = colors[n][1] + "22"; // Light version for bg
-            document.getElementById('res-color-bg').style.borderColor = colors[n][1];
-            document.getElementById('astro-box').classList.remove('hidden');
+            const colors = {1:"Gold", 2:"Silver", 3:"Yellow", 4:"Grey", 5:"Green", 6:"Sky Blue", 7:"Lime", 8:"Royal Blue", 9:"Red"};
+            document.getElementById('res-num').innerText = sum;
+            document.getElementById('res-col').innerText = colors[sum];
+            document.getElementById('luck-res').classList.remove('hidden');
         }
     </script>
 </body>
