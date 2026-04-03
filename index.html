@@ -3,112 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyPunjabiEarn | Global Earning Platform</title>
+    <title>Daily Punjabi Earn | Winnipeg's Trusted Earning Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0f172a; color: white; line-height: 1.6; }
+        :root { --primary: #facc15; --bg: #0f172a; --card: #1e293b; --text: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
         
-        /* Header */
-        header {
-            background-color: #000;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #334155;
-        }
-        .logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: 1px; }
-        .logo span { color: #facc15; }
-        .lang-switch span { margin-left: 15px; font-size: 14px; cursor: pointer; color: #94a3b8; }
-        .lang-switch span:hover { color: #facc15; }
+        /* Navigation */
+        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 22px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links a { margin-left: 15px; text-decoration: none; color: #94a3b8; font-size: 14px; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
 
-        /* Main Hero Section */
-        .hero {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
-            padding: 60px 20px;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-        .hero h1 { font-size: clamp(32px, 5vw, 56px); margin-bottom: 20px; font-weight: 800; }
-        .hero h1 span { color: #facc15; }
-        .hero p { color: #cbd5e1; font-size: 18px; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        /* Hero Section */
+        header.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #1e40af 0%, #0f172a 100%); }
+        .hero h1 { font-size: clamp(35px, 6vw, 60px); margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
+        .hero h1 span { color: var(--primary); text-shadow: 0 0 20px rgba(250, 204, 21, 0.4); }
+        .hero p { font-size: 18px; color: #cbd5e1; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        /* The Master Button */
+        .main-btn { background: var(--primary); color: #000; padding: 20px 50px; font-size: 24px; font-weight: 800; text-decoration: none; border-radius: 12px; display: inline-block; transition: 0.3s; text-transform: uppercase; box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3); }
+        .main-btn:hover { transform: scale(1.05); background: #fff; box-shadow: 0 15px 30px rgba(250, 204, 21, 0.5); }
 
-        /* The Button - Your Smart Link Attached */
-        .main-btn {
-            background-color: #facc15;
-            color: #000;
-            padding: 20px 45px;
-            font-size: 22px;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 12px;
-            display: inline-block;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.3);
-            text-transform: uppercase;
-        }
-        .main-btn:hover { transform: scale(1.05); background-color: #fde047; }
+        /* Content Sections */
+        section { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        .section-title { font-size: 30px; color: var(--primary); margin-bottom: 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
+        .content-box { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid #334155; margin-bottom: 30px; }
+        
+        /* Footer */
+        footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid #334155; margin-top: 100px; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 14px; }
+        .footer-links a:hover { color: var(--primary); }
+        .copy { color: #64748b; font-size: 12px; }
 
-        /* Info Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .card {
-            background-color: #1e293b;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            text-align: center;
-        }
-        .card h3 { color: #facc15; margin-bottom: 10px; font-size: 20px; }
-        .card p { color: #94a3b8; font-size: 15px; }
-
-        @media (max-width: 600px) {
-            .hero { margin: 10px; border-radius: 20px; padding: 40px 15px; }
-            .main-btn { width: 100%; font-size: 18px; }
+        @media (max-width: 768px) {
+            .hero { padding: 60px 15px; }
+            .nav-links { display: none; } /* Simplified for mobile */
+            .main-btn { width: 100%; font-size: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">DAILY<span>PUNJABI</span>EARN</div>
-        <div class="lang-switch">
-            <span>English</span>
-            <span>ਪੰਜਾਬੀ</span>
-            <span>हिंदी</span>
+    <nav>
+        <a href="#" class="logo">DAILY<span>PUNJABI</span>EARN</a>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#disclaimer">Disclaimer</a>
         </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Winnipeg's Best <br><span>Online Earning</span> Tool</h1>
+        <p>ਰੋਜ਼ਾਨਾ ਘਰ ਬੈਠੇ ਡਾਲਰ ਕਮਾਓ। ਕੋਈ ਇਨਵੈਸਟਮੈਂਟ ਨਹੀਂ, ਕੋਈ ਰਿਸਕ ਨਹੀਂ। ਬਸ ਟਾਸਕ ਪੂਰਾ ਕਰੋ ਅਤੇ ਆਪਣੀ ਕਮਾਈ ਸ਼ੁਰੂ ਕਰੋ।</p>
+        
+        <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" class="main-btn">START MAIN TASK NOW</a>
     </header>
 
-    <section class="hero">
-        <h1>Earn <span>Real Dollars</span> Daily</h1>
-        <p>Winnipeg's most trusted platform for high-paying online tasks. Zero investment required. Start earning from home today.</p>
-        
-        <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" class="main-btn">START MAIN TASK</a>
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="content-box">
+            <p>Welcome to <strong>Daily Punjabi Earn</strong>. We are a dedicated platform helping people in Winnipeg and across the globe to earn money online through simple advertising tasks. Our goal is to provide a transparent and easy way for everyone to generate side income without any initial investment.</p>
+        </div>
     </section>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Easy Tasks</h3>
-            <p>Complete simple surveys and daily tasks to earn rewards instantly.</p>
+    <section id="privacy">
+        <h2 class="section-title">Privacy Policy</h2>
+        <div class="content-box">
+            <p>At Daily Punjabi Earn, we respect your privacy. We do not collect personal sensitive information. Our website may use cookies to improve user experience and show relevant ads through third-party networks like Adsterra. By using our site, you agree to our privacy practices.</p>
         </div>
-        <div class="card">
-            <h3>Fast Payout</h3>
-            <p>Get your earnings directly into your account with 100% security.</p>
+    </section>
+
+    <section id="disclaimer">
+        <h2 class="section-title">Disclaimer</h2>
+        <div class="content-box">
+            <p><strong>Earnings Disclaimer:</strong> The results may vary from person to person. While many users earn daily, we do not guarantee specific amounts. This website contains promotional links. Clicking on "Start Main Task" will redirect you to third-party ad offers. We are not responsible for the content on external sites.</p>
         </div>
-        <div class="card">
-            <h3>24/7 Support</h3>
-            <p>Our team is always here to help you maximize your daily earnings.</p>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#disclaimer">Disclaimer</a>
         </div>
-    </div>
+        <p class="copy">&copy; 2026 Daily Punjabi Earn | Built for Winnipeg Community</p>
+    </footer>
 
 </body>
 </html>
