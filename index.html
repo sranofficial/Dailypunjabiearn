@@ -194,7 +194,17 @@
         function calcLoan() {
             let p = parseFloat(document.getElementById('loanP').value);
             let r = parseFloat(document.getElementById('loanR').value)/12/100;
-            let t = parseFloat(document.getElementById('loanT').value);
+            let t = parseFloat(document.getElementById('loanT').value);<!-- Shopping Option - ਨਵਾਂ ਸੈਕਸ਼ਨ -->
+<section class="max-w-6xl mx-auto p-8 bg-white">
+    <h2 class="text-3xl mb-6 text-center">Online Shopping - ਘਰ ਬੈਠੇ ਖਰੀਦੋ ਤੇ ਕਮਾਓ</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="https://www.amazon.ca" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛒 Amazon Shopping</a>
+        <a href="https://www.flipkart.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛍 Flipkart</a>
+        <a href="https://www.walmart.ca" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🏪 Walmart Canada</a>
+        <a href="https://www.ebay.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">💰 eBay</a>
+    </div>
+    <p class="text-center text-sm mt-6 text-gray-600">ਸ਼ਾਪਿੰਗ ਲਿੰਕ ਤੇ ਕਲਿੱਕ ਕਰੋ → ਤੁਹਾਨੂੰ ਕਮਿਸ਼ਨ ਮਿਲੇਗਾ</p>
+</section>
             if(p && r && t) {
                 let total = p + (p * r * t);
                 document.getElementById('loanResult').innerHTML = 'Total Interest: $' + (total - p).toFixed(2);
