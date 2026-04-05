@@ -32,13 +32,31 @@
         <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-3xl shadow-xl">
     </div>
 
-    <!-- Numerology -->
+    <!-- Numerology - ਬਹੁਤ ਸਾਰੀਆਂ ਆਪਸ਼ਨ (ਬਿਜ਼ੀ ਬਣਾਉਣ ਲਈ ਫੁੱਲ) -->
     <section class="max-w-6xl mx-auto p-8 bg-white">
         <h2 class="text-3xl mb-6 text-center">Numerology - ਆਪਣਾ ਲੱਕ ਚੈੱਕ ਕਰੋ</h2>
-        <div class="max-w-md mx-auto">
-            <input id="birthDate" type="date" class="border p-3 w-full mb-4 rounded-2xl">
-            <button onclick="calcNumerology()" class="bg-amber-600 text-white w-full py-4 rounded-3xl text-lg font-bold">ਚੈੱਕ ਕਰੋ ਆਪਣਾ ਲੱਕ</button>
-            <p id="numResult" class="mt-6 text-2xl font-bold text-center"></p>
+        <div class="max-w-md mx-auto space-y-8">
+            <!-- Life Path -->
+            <div>
+                <p class="font-medium">Life Path Number (ਜੀਵਨ ਮਾਰਗ ਨੰਬਰ)</p>
+                <input id="birthDate" type="date" class="border p-3 w-full rounded-2xl">
+                <button onclick="calcLifePath()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ</button>
+            </div>
+            
+            <!-- Lucky Number -->
+            <div>
+                <p class="font-medium">Lucky Number (ਲੱਕੀ ਨੰਬਰ)</p>
+                <input id="luckyName" type="text" placeholder="ਆਪਣਾ ਨਾਮ ਲਿਖੋ" class="border p-3 w-full rounded-2xl">
+                <button onclick="calcLuckyNumber()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ</button>
+            </div>
+            
+            <!-- Money Luck -->
+            <div>
+                <p class="font-medium">Money Luck Score (ਪੈਸਾ ਲੱਕ)</p>
+                <button onclick="calcMoneyLuck()" class="bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ ਆਪਣਾ ਪੈਸਾ ਲੱਕ</button>
+            </div>
+            
+            <p id="numResult" class="mt-4 text-2xl font-bold text-center"></p>
         </div>
     </section>
 
@@ -82,7 +100,7 @@
     <!-- How Earning Starts -->
     <section class="max-w-6xl mx-auto p-8 bg-white">
         <h2 class="text-3xl mb-6 text-center">How Earning Starts</h2>
-        <div class="max-w-md mx-auto space-y-4">
+        <div class="max-w-md mx-auto space-y-6 text-lg">
             <div class="flex items-center gap-3"><span class="text-2xl">1️⃣</span><p>ਫੇਸਬੁੱਕ ਤੇ ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ</p></div>
             <div class="flex items-center gap-3"><span class="text-2xl">2️⃣</span><p>ਲੋਕ ਵੈਬਸਾਈਟ ਖੋਲ੍ਹਣਗੇ ਤੇ Adsterra ਐਡ ਤੇ ਕਲਿੱਕ ਕਰਨਗੇ</p></div>
             <div class="flex items-center gap-3"><span class="text-2xl">3️⃣</span><p>ਤੁਹਾਨੂੰ ਡਾਲਰ ਆਉਣਾ ਸ਼ੁਰੂ ਹੋਣਗੇ (PayPal ਤੇ)</p></div>
@@ -157,6 +175,24 @@
             let sum = nums.reduce((a, b) => a + b, 0);
             while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
             document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਲੱਕ ਨੰਬਰ ਹੈ <span class="text-amber-600 text-4xl">${sum}</span>`;
+        }
+        function calcLifePath() {
+            // ਇਸ ਲਈ ਉਪਰ ਵਾਲਾ ਫੰਕਸ਼ਨ ਵਰਤਿਆ ਗਿਆ ਹੈ
+            calcNumerology();
+        }
+        function calcLuckyNumber() {
+            const name = document.getElementById('luckyName').value.trim();
+            if (!name) return alert("ਨਾਮ ਲਿਖੋ");
+            let sum = 0;
+            for (let char of name.toLowerCase()) {
+                if (char >= 'a' && char <= 'z') sum += char.charCodeAt(0) - 96;
+            }
+            while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
+            document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਲੱਕੀ ਨੰਬਰ ਹੈ <span class="text-amber-600 text-4xl">${sum}</span>`;
+        }
+        function calcMoneyLuck() {
+            const randomScore = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਪੈਸਾ ਲੱਕ ਸਕੋਰ ਹੈ <span class="text-amber-600 text-4xl">${randomScore}%</span> – ਬਹੁਤ ਵਧੀਆ!`;
         }
         function calcEMI() {
             let p = parseFloat(document.getElementById('emiP').value);
