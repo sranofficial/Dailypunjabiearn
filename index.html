@@ -186,7 +186,7 @@
             let r = parseFloat(document.getElementById('sipR').value)/12/100;
             let t = parseFloat(document.getElementById('sipT').value)*12;
             if(p && r && t) {
-                let sip = p * ((Math.pow(1+r,t)-1)/r) * (1+r);
+                let sip =  p * ((Math.pow(1+r,t)-1)/r) * (1+r);
                 document.getElementById('sipResult').innerHTML = 'Future Value: $' + sip.toFixed(2);
             }
         }
