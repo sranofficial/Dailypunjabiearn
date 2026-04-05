@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyPunjabiEarn - ਰੋਜ਼ $50 ਤੋਂ $1000 ਤੱਕ ਕਮਾਓ</title>
+    <title>DailyPunjabiEarn - Earn $50 to $1000 Daily</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>body{font-family: system-ui;}</style>
 </head>
@@ -25,37 +25,45 @@
     </div>
 
     <section class="bg-gradient-to-r from-amber-300 to-yellow-200 text-amber-900 py-16 text-center">
-        <h1 id="hero" class="text-5xl font-bold">ਰੋਜ਼ $50 ਤੋਂ $1000 ਤੱਕ ਕਮਾਓ</h1>
+        <h1 id="hero" class="text-5xl font-bold">Earn $50 to $1000 Daily</h1>
     </section>
 
     <div class="max-w-6xl mx-auto p-6">
         <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-3xl shadow-xl">
     </div>
 
-    <!-- Numerology - ਬਹੁਤ ਸਾਰੀਆਂ ਆਪਸ਼ਨ (ਬਿਜ਼ੀ ਬਣਾਉਣ ਲਈ ਫੁੱਲ) -->
+    <!-- Real Ways to Earn Money (ਪਹਿਲੀ ਥਾਂ ਤੇ ਰੱਖਿਆ ਹੈ) -->
     <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-3xl mb-6 text-center">Numerology - ਆਪਣਾ ਲੱਕ ਚੈੱਕ ਕਰੋ</h2>
+        <h2 class="text-3xl mb-8 text-center">Real Ways to Earn Money</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="https://www.upwork.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">💼 Upwork Freelance</a>
+            <a href="https://groww.in" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📈 Groww SIP</a>
+            <a href="https://www.amazon.ca" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛒 Amazon Affiliate</a>
+            <a href="https://www.fiverr.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">⭐ Fiverr Gigs</a>
+            <a href="https://www.youtube.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">▶ YouTube Shorts</a>
+            <a href="https://www.etsy.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛍 Etsy Digital Products</a>
+            <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" target="_blank" class="bg-orange-500 text-white p-6 rounded-3xl shadow hover:shadow-2xl text-center col-span-2 md:col-span-1 text-xl font-bold">💰 Adsterra - Earn More Money Now</a>
+            <a href="https://www.surveyjunkie.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📋 Online Surveys</a>
+        </div>
+    </section>
+
+    <!-- Numerology -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-3xl mb-6 text-center">Numerology - Check Your Luck</h2>
         <div class="max-w-md mx-auto space-y-8">
-            <!-- Life Path -->
             <div>
-                <p class="font-medium">Life Path Number (ਜੀਵਨ ਮਾਰਗ ਨੰਬਰ)</p>
+                <p class="font-medium">Life Path Number</p>
                 <input id="birthDate" type="date" class="border p-3 w-full rounded-2xl">
-                <button onclick="calcLifePath()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ</button>
+                <button onclick="calcNumerology()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Luck</button>
             </div>
-            
-            <!-- Lucky Number -->
             <div>
-                <p class="font-medium">Lucky Number (ਲੱਕੀ ਨੰਬਰ)</p>
-                <input id="luckyName" type="text" placeholder="ਆਪਣਾ ਨਾਮ ਲਿਖੋ" class="border p-3 w-full rounded-2xl">
-                <button onclick="calcLuckyNumber()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ</button>
+                <p class="font-medium">Lucky Number (Enter Name)</p>
+                <input id="luckyName" type="text" placeholder="Your Name" class="border p-3 w-full rounded-2xl">
+                <button onclick="calcLuckyNumber()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Lucky Number</button>
             </div>
-            
-            <!-- Money Luck -->
             <div>
-                <p class="font-medium">Money Luck Score (ਪੈਸਾ ਲੱਕ)</p>
-                <button onclick="calcMoneyLuck()" class="bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">ਚੈੱਕ ਕਰੋ ਆਪਣਾ ਪੈਸਾ ਲੱਕ</button>
+                <button onclick="calcMoneyLuck()" class="bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Money Luck Score</button>
             </div>
-            
             <p id="numResult" class="mt-4 text-2xl font-bold text-center"></p>
         </div>
     </section>
@@ -79,31 +87,6 @@
             <div id="tip3" class="bg-white p-6 rounded-3xl shadow">3. Share Amazon Affiliate Links</div>
             <div id="tip4" class="bg-white p-6 rounded-3xl shadow">4. Make YouTube Shorts</div>
             <div id="tip5" class="bg-white p-6 rounded-3xl shadow">5. Create Logos on Fiverr</div>
-        </div>
-    </section>
-
-    <!-- Real Earning Options -->
-    <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-3xl mb-8 text-center">Real Ways to Earn Money</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <a href="https://www.upwork.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">💼 Upwork Freelance</a>
-            <a href="https://groww.in" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📈 Groww SIP</a>
-            <a href="https://www.amazon.ca" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛒 Amazon Affiliate</a>
-            <a href="https://www.fiverr.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">⭐ Fiverr Gigs</a>
-            <a href="https://www.youtube.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">▶ YouTube Shorts</a>
-            <a href="https://www.etsy.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛍 Etsy Digital Products</a>
-            <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" target="_blank" class="bg-orange-500 text-white p-6 rounded-3xl shadow hover:shadow-2xl text-center col-span-2 md:col-span-1 text-xl font-bold">💰 Adsterra - Earn More Money Now</a>
-            <a href="https://www.surveyjunkie.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📋 Online Surveys</a>
-        </div>
-    </section>
-
-    <!-- How Earning Starts -->
-    <section class="max-w-6xl mx-auto p-8 bg-white">
-        <h2 class="text-3xl mb-6 text-center">How Earning Starts</h2>
-        <div class="max-w-md mx-auto space-y-6 text-lg">
-            <div class="flex items-center gap-3"><span class="text-2xl">1️⃣</span><p>ਫੇਸਬੁੱਕ ਤੇ ਲਿੰਕ ਸ਼ੇਅਰ ਕਰੋ</p></div>
-            <div class="flex items-center gap-3"><span class="text-2xl">2️⃣</span><p>ਲੋਕ ਵੈਬਸਾਈਟ ਖੋਲ੍ਹਣਗੇ ਤੇ Adsterra ਐਡ ਤੇ ਕਲਿੱਕ ਕਰਨਗੇ</p></div>
-            <div class="flex items-center gap-3"><span class="text-2xl">3️⃣</span><p>ਤੁਹਾਨੂੰ ਡਾਲਰ ਆਉਣਾ ਸ਼ੁਰੂ ਹੋਣਗੇ (PayPal ਤੇ)</p></div>
         </div>
     </section>
 
@@ -166,33 +149,29 @@
             }
         }
         function shareSite() {
-            navigator.clipboard.writeText("https://sranofficial.github.io/Dailypunjabiearn").then(() => alert("ਲਿੰਕ ਕਾਪੀ ਹੋ ਗਿਆ! ਫੇਸਬੁੱਕ ਤੇ ਸ਼ੇਅਰ ਕਰੋ 💰"));
+            navigator.clipboard.writeText("https://sranofficial.github.io/Dailypunjabiearn").then(() => alert("Link copied! Share on Facebook 💰"));
         }
         function calcNumerology() {
             const date = document.getElementById('birthDate').value;
-            if (!date) return alert("ਜਨਮ ਤਾਰੀਖ ਭਰੋ");
+            if (!date) return alert("Enter birth date");
             const nums = date.replace(/-/g, '').split('').map(Number);
             let sum = nums.reduce((a, b) => a + b, 0);
             while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
-            document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਲੱਕ ਨੰਬਰ ਹੈ <span class="text-amber-600 text-4xl">${sum}</span>`;
-        }
-        function calcLifePath() {
-            // ਇਸ ਲਈ ਉਪਰ ਵਾਲਾ ਫੰਕਸ਼ਨ ਵਰਤਿਆ ਗਿਆ ਹੈ
-            calcNumerology();
+            document.getElementById('numResult').innerHTML = `Your Life Path Number is <span class="text-amber-600 text-4xl">${sum}</span>`;
         }
         function calcLuckyNumber() {
             const name = document.getElementById('luckyName').value.trim();
-            if (!name) return alert("ਨਾਮ ਲਿਖੋ");
+            if (!name) return alert("Enter your name");
             let sum = 0;
             for (let char of name.toLowerCase()) {
                 if (char >= 'a' && char <= 'z') sum += char.charCodeAt(0) - 96;
             }
             while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
-            document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਲੱਕੀ ਨੰਬਰ ਹੈ <span class="text-amber-600 text-4xl">${sum}</span>`;
+            document.getElementById('numResult').innerHTML = `Your Lucky Number is <span class="text-amber-600 text-4xl">${sum}</span>`;
         }
         function calcMoneyLuck() {
             const randomScore = Math.floor(Math.random() * 100) + 1;
-            document.getElementById('numResult').innerHTML = `ਤੁਹਾਡਾ ਪੈਸਾ ਲੱਕ ਸਕੋਰ ਹੈ <span class="text-amber-600 text-4xl">${randomScore}%</span> – ਬਹੁਤ ਵਧੀਆ!`;
+            document.getElementById('numResult').innerHTML = `Your Money Luck Score is <span class="text-amber-600 text-4xl">${randomScore}%</span> – Very Good!`;
         }
         function calcEMI() {
             let p = parseFloat(document.getElementById('emiP').value);
