@@ -1,5 +1,209 @@
 <!DOCTYPE html>
+<html lang="en"><!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Real Money Earn - Earn $50 to $1000 Daily</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{font-family: system-ui;}</style>
+</head>
+<body class="bg-yellow-100">
+    <nav class="bg-amber-500 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold">Daily Real Money Earn</div>
+            <div class="flex gap-3">
+                <button onclick="changeLang('en')" class="px-4 py-1 bg-white text-amber-700 rounded font-bold">English</button>
+                <button onclick="changeLang('pa')" class="px-4 py-1 bg-white text-amber-700 rounded">ਪੰਜਾਬੀ</button>
+                <button onclick="changeLang('hi')" class="px-4 py-1 bg-white text-amber-700 rounded">हिंदी</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ਟਾਪ ਤੇ ਛੋਟੀ ੴ -->
+    <div class="text-center py-4">
+        <div class="inline-block text-5xl font-light text-amber-800">ੴ</div>
+    </div>
+
+    <section class="bg-gradient-to-r from-amber-300 to-yellow-200 text-amber-900 py-16 text-center">
+        <h1 id="hero" class="text-5xl font-bold">Earn Real Money Daily</h1>
+    </section>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <img src="https://source.unsplash.com/random/1200x400/?money,winnipeg" alt="Earn Money" class="w-full rounded-3xl shadow-xl">
+    </div>
+
+    <!-- Numerology -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-3xl mb-6 text-center">Numerology - Check Your Luck</h2>
+        <div class="max-w-md mx-auto space-y-8">
+            <div>
+                <p class="font-medium">Life Path Number</p>
+                <input id="birthDate" type="date" class="border p-3 w-full rounded-2xl">
+                <button onclick="calcNumerology()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Luck</button>
+            </div>
+            <div>
+                <p class="font-medium">Lucky Number (Enter Name)</p>
+                <input id="luckyName" type="text" placeholder="Your Name" class="border p-3 w-full rounded-2xl">
+                <button onclick="calcLuckyNumber()" class="mt-3 bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Lucky Number</button>
+            </div>
+            <div>
+                <button onclick="calcMoneyLuck()" class="bg-amber-600 text-white w-full py-3 rounded-3xl text-lg">Check Money Luck Score</button>
+            </div>
+            <p id="numResult" class="mt-4 text-2xl font-bold text-center"></p>
+        </div>
+    </section>
+
+    <!-- Knowledge -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-3xl mb-6 text-center">Knowledge</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-3xl shadow">💡 SIP of $100/month at 12% can become over $100,000 in 25 years</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 YouTube Shorts can earn $1000+ per month with good views</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 Fiverr gigs in Punjabi content can earn $20-50 per order</div>
+            <div class="bg-white p-6 rounded-3xl shadow">💡 Amazon Affiliate gives 5-10% commission on every sale</div>
+        </div>
+    </section>
+    
+    <section class="max-w-6xl mx-auto p-8">
+        <h2 id="tips_title" class="text-3xl mb-8 text-center">5 Daily Earning Tips</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div id="tip1" class="bg-white p-6 rounded-3xl shadow">1. Sell Punjabi writing on Upwork</div>
+            <div id="tip2" class="bg-white p-6 rounded-3xl shadow">2. Start SIP on Groww App</div>
+            <div id="tip3" class="bg-white p-6 rounded-3xl shadow">3. Share Amazon Affiliate Links</div>
+            <div id="tip4" class="bg-white p-6 rounded-3xl shadow">4. Make YouTube Shorts</div>
+            <div id="tip5" class="bg-white p-6 rounded-3xl shadow">5. Create Logos on Fiverr</div>
+        </div>
+    </section>
+
+    <!-- Real Ways to Earn Money -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 class="text-3xl mb-8 text-center">Real Ways to Earn Money</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="https://www.upwork.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">💼 Upwork Freelance</a>
+            <a href="https://groww.in" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📈 Groww SIP</a>
+            <a href="https://www.amazon.ca" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛒 Amazon Affiliate</a>
+            <a href="https://www.fiverr.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">⭐ Fiverr Gigs</a>
+            <a href="https://www.youtube.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">▶ YouTube Shorts</a>
+            <a href="https://www.etsy.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">🛍 Etsy Digital Products</a>
+            <a href="https://www.profitablecpmratenetwork.com/jdkfzvb3?key=9b488cdf1d0a5ea598bb4653747475b6" target="_blank" class="bg-orange-500 text-white p-6 rounded-3xl shadow hover:shadow-2xl text-center col-span-2 md:col-span-1 text-xl font-bold">💰 Adsterra - Earn More Money Now</a>
+            <a href="https://www.surveyjunkie.com" target="_blank" class="bg-white p-6 rounded-3xl shadow hover:shadow-2xl text-center">📋 Online Surveys</a>
+        </div>
+    </section>
+
+    <!-- Calculators -->
+    <section class="max-w-6xl mx-auto p-8 bg-white">
+        <h2 id="calc_title" class="text-3xl mb-8 text-center">Interactive Calculators</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-bold mb-3">EMI Calculator</h3>
+                <input id="emiP" type="number" placeholder="Loan Amount" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="emiR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="emiT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcEMI()" class="bg-amber-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="emiResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">SIP Calculator</h3>
+                <input id="sipP" type="number" placeholder="Monthly Investment" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="sipR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="sipT" type="number" placeholder="Years" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcSIP()" class="bg-amber-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="sipResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Loan Interest</h3>
+                <input id="loanP" type="number" placeholder="Principal" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="loanR" type="number" placeholder="Rate %" class="border p-3 w-full mb-3 rounded-xl">
+                <input id="loanT" type="number" placeholder="Months" class="border p-3 w-full mb-3 rounded-xl">
+                <button onclick="calcLoan()" class="bg-amber-600 text-white w-full py-4 rounded-2xl text-lg">Calculate</button>
+                <p id="loanResult" class="mt-6 text-xl font-bold text-center"></p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-amber-800 text-white p-8 text-center">
+        <div class="flex flex-wrap justify-center gap-8 text-sm">
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">About Us</a>
+            <a href="#" class="hover:underline">Contact Us</a>
+        </div>
+        <p class="mt-6">Canada • Daily Real Money Earn © 2026</p>
+    </footer>
+    
+    <button onclick="shareSite()" class="fixed bottom-20 left-6 bg-amber-600 text-white p-4 rounded-full shadow-2xl flex items-center gap-2">📤 Share Now</button>
+    
+    <script>
+        function changeLang(lang) {
+            if (lang === 'pa') {
+                document.getElementById('hero').innerHTML = "ਰੋਜ਼ $50 ਤੋਂ $1000 ਤੱਕ ਕਮਾਓ";
+                document.getElementById('tips_title').innerHTML = "5 ਡੇਲੀ ਆਰਨਿੰਗ ਟਿਪਸ";
+                document.getElementById('calc_title').innerHTML = "ਇੰਟਰੈਕਟਿਵ ਕੈਲਕੁਲੇਟਰ";
+            } else if (lang === 'hi') {
+                document.getElementById('hero').innerHTML = "रोज़ $50 से $1000 तक कमाएं";
+                document.getElementById('tips_title').innerHTML = "5 डेली अर्निंग टिप्स";
+                document.getElementById('calc_title').innerHTML = "इंटरएक्टिव कैलकुलेटर";
+            } else {
+                document.getElementById('hero').innerHTML = "Earn $50 to $1000 Daily";
+                document.getElementById('tips_title').innerHTML = "5 Daily Earning Tips";
+                document.getElementById('calc_title').innerHTML = "Interactive Calculators";
+            }
+        }
+        function shareSite() {
+            navigator.clipboard.writeText("https://sranofficial.github.io/Dailypunjabiearn").then(() => alert("Link copied! Share on Facebook 💰"));
+        }
+        function calcNumerology() {
+            const date = document.getElementById('birthDate').value;
+            if (!date) return alert("Enter birth date");
+            const nums = date.replace(/-/g, '').split('').map(Number);
+            let sum = nums.reduce((a, b) => a + b, 0);
+            while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
+            document.getElementById('numResult').innerHTML = `Your Life Path Number is <span class="text-amber-600 text-4xl">${sum}</span>`;
+        }
+        function calcLuckyNumber() {
+            const name = document.getElementById('luckyName').value.trim();
+            if (!name) return alert("Enter your name");
+            let sum = 0;
+            for (let char of name.toLowerCase()) {
+                if (char >= 'a' && char <= 'z') sum += char.charCodeAt(0) - 96;
+            }
+            while (sum > 9) sum = String(sum).split('').map(Number).reduce((a, b) => a + b, 0);
+            document.getElementById('numResult').innerHTML = `Your Lucky Number is <span class="text-amber-600 text-4xl">${sum}</span>`;
+        }
+        function calcMoneyLuck() {
+            const randomScore = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('numResult').innerHTML = `Your Money Luck Score is <span class="text-amber-600 text-4xl">${randomScore}%</span> – Very Good!`;
+        }
+        function calcEMI() {
+            let p = parseFloat(document.getElementById('emiP').value);
+            let r = parseFloat(document.getElementById('emiR').value)/12/100;
+            let t = parseFloat(document.getElementById('emiT').value);
+            if(p && r && t) {
+                let emi = p * r * Math.pow(1+r,t) / (Math.pow(1+r,t)-1);
+                document.getElementById('emiResult').innerHTML = 'EMI: $' + emi.toFixed(2);
+            }
+        }
+        function calcSIP() {
+            let p = parseFloat(document.getElementById('sipP').value);
+            let r = parseFloat(document.getElementById('sipR').value)/12/100;
+            let t = parseFloat(document.getElementById('sipT').value)*12;
+            if(p && r && t) {
+                let sip = p * ((Math.pow(1+r,t)-1)/r) * (1+r);
+                document.getElementById('sipResult').innerHTML = 'Future Value: $' + sip.toFixed(2);
+            }
+        }
+        function calcLoan() {
+            let p = parseFloat(document.getElementById('loanP').value);
+            let r = parseFloat(document.getElementById('loanR').value)/12/100;
+            let t = parseFloat(document.getElementById('loanT').value);
+            if(p && r && t) {
+                let total = p + (p * r * t);
+                document.getElementById('loanResult').innerHTML = 'Total Interest: $' + (total - p).toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
